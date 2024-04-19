@@ -18,8 +18,8 @@ router.post("/login", (req, res) => {
     userCred.userPassword === loginCred.password
   )
     res.render("homePage", { userName: loginCred.userName });
-//   else 
-    // res.render('/',{error :"Sorry! User name or password incorrect"})
+  else
+    res.render("loginPage",{error : "Sorry! UserName or Password Incorrect "});
 });
 router.get("/login", (req, res) => {
   res.redirect("/");
