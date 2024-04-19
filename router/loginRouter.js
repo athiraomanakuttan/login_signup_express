@@ -1,8 +1,31 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+router.use(express.urlencoded({ extended: true }));
 
-router.get('/', (req, res) => {
-    res.render('loginPage');
+// ----------------- Login credentials saved locally--------
+
+const loginCred = { userName: "Athira", password: "123456" };
+
+// --------------------------- Routes ------------------------------
+
+router.get("/", (req, res) => {
+  res.render("loginPage");
 });
-// router.post('/')
+router.post("/login", (req, res) => {
+  const userCred = req.body;
+  if (
+    userCred.userName === loginCred.userName &&
+    userCred.userPassword === loginCred.password
+  )
+    res.render("homePage", { userName: loginCred.userName });
+//   else 
+    // res.render('/',{error :"Sorry! User name or password incorrect"})
+});
+router.get("/login", (req, res) => {
+  res.redirect("/");
+});
+router.get("/signup", (req, res) => {
+  res.render("signupPage");
+});
+
 module.exports = router;

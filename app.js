@@ -6,5 +6,4 @@ const loginRouter = require('./router/loginRouter');
 app.listen(8000);
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
 app.use('/', loginRouter);
