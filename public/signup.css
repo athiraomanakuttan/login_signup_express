@@ -8,14 +8,7 @@ a{
 ::placeholder {
     color: rgb(247, 246, 246) !important;
   }
-.main{
-    height: 100vh;
-    background-image: url('./img/freepik.jpg');
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
+
 
 .signup-box{
     background-color: #e68588b7;
@@ -29,14 +22,14 @@ a{
     font-weight: 600;
     text-shadow: 2px 2px 2px #4e4747;
 }
-.signup-box input, .signup-box input:focus{
-    background: none;
+input,input:focus{
+    background: none !important;
     border: none !important;
     border-bottom: 2px solid #fff !important;
-    color: #fff;
-    outline: none;
-    border-color: none;
-    box-shadow: none;
+    color: #fff !important;
+    outline: none !important;
+    border-color: none !important;
+    box-shadow: none !important;
 }
 .signup-box button{
     background-color:#fff9e6;

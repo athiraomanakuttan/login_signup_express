@@ -1,1 +1,14 @@
-<h1>Home page Welcome</h1>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('header') %>
+<body>
+    <div class="home-main">
+        <%- include('navbar') %>
+        <div class="center-container"> 
+            <h2 class="text-center">Hey <span class="text-danger"><%= userName %> </span> ! Welcome To Home Page</h2>
+            <a href="/" class=" btn-danger mt-3 text-light logout-btn">Log Out <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+    </div>
+<%- include('footer') %>
+</body>
+</html>
